@@ -21,12 +21,7 @@ int main()
     ifs.open("students.txt");
     ofs.open("students.bin");
 
-    if(!ifs.fail())
-    {
-        cout << "Could not open the fils \n";
-        exit(0);
-    }
-    // for 10 times
+    for (int i = 0; i < 10; ++i) {
         ifs >> s.id;
         ifs >> s.sname;
         ifs >> s.score[0];
@@ -36,11 +31,12 @@ int main()
 
         cout << "ID: " << s.id << endl;
         cout << "Name: " << s.sname << endl;
-        cout << "Score 1: " << s.score[1] << endl;
+        cout << "Score 1: " << s.score[0] << endl;
         cout << "Score 2: " << s.score[1] << endl;
         cout << "Sum: " << s.sum << endl;
-        cout << "Avg: " << s.avg << endl;
+        cout << "Avg: " << s.avg << "\n" << endl;
 
         ofs.write( (char *)&s, sizeof(s) ); 
-
+    }
+        
 }
