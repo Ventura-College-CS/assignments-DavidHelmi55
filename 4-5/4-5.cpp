@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <cstring>
 using namespace std;
 
 void initVectors(vector<int> & , vector<string> &, int);
@@ -45,26 +46,21 @@ void initVectors(vector<int> &IDs, vector<string> &names, int N)
 }
 void sortVectors(vector<int> &IDs, vector<string> &names, int N)
 {
-    int minval, minid;
+    string string1, string2;
     string tmp;
     for(int i=0; i<N; i++)
     {
-        minval = IDs[i];
-        minid = i;
+        string1 = names[i];
+        string2 = names[i+1];
         for(int j=i+1; j<N; j++)
         {
-            if ( minval > IDs[j] )
+            if ( string1 > string2 )
             {
-                minval = IDs[j];
-                minid = j;
+                tmp = string1;
+                string1 = string2;
+                string2 = tmp;
             }
         }
-        IDs[minid] = IDs[i];
-        IDs[i] = minval;
-
-        tmp = names[minid];
-        names[minid] = names[i];
-        names[i] = tmp;
     }
 }
 void printVectors(vector<int> IDs, vector<string> names, int N)
