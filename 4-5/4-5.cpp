@@ -46,23 +46,53 @@ void initVectors(vector<int> &IDs, vector<string> &names, int N)
 }
 void sortVectors(vector<int> &IDs, vector<string> &names, int N)
 {
-    string string1, string2;
-    string tmp;
-    for(int i=0; i<N; i++)
-    {
-        string1 = names[i];
-        string2 = names[i+1];
-        for(int j=i+1; j<N; j++)
-        {
-            if ( string1 > string2 )
-            {
-                tmp = string1;
-                string1 = string2;
-                string2 = tmp;
-            }
-        }
-    }
+	// string string1, string2;
+	string tmp;
+	for (int i = 0; i < N; i++)
+	{
+		// string1 = names[i];
+		// string2 = names[i+1];
+		// for(int j=i+1; j<N; j++)
+		for (int j = 0; j < N - 1; j++)
+		{
+			// if (string1 > string2)
+			if (names[j] > names[j + 1])
+			{
+				tmp = names[j + 1];
+				names[j + 1] = names[j];
+				names[j] = tmp;
+				// tmp = string1;
+				// string1 = string2;
+				// string2 = tmp;
+			}
+		}
+	}
 }
+
+
+
+
+
+
+// void sortVectors(vector<int> &IDs, vector<string> &names, int N)
+// {
+//     string string1, string2;
+//     string tmp;
+//     for(int i=0; i<N; i++)
+//     {
+//         string1 = names[i];
+//         string2 = names[i+1];
+//         for(int j=i+1; j<N; j++)
+//         {
+//             if ( string1 > string2 )
+//             {
+//                 tmp = string1;
+//                 string1 = string2;
+//                 string2 = tmp;
+//             }
+//         }
+//     }
+// }
 void printVectors(vector<int> IDs, vector<string> names, int N)
 {
     for(int i=0; i<N; i++)
