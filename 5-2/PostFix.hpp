@@ -45,7 +45,6 @@ private:
 		}
 		return result;
 	}
-	int isdigit(int);
 
 public:
 	PostfixExp() : expression() {}
