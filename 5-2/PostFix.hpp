@@ -9,8 +9,42 @@ class PostfixExp
 {
 private:
 	string expression;
-	int isOperator(char);
-	int calculate(int, int, char);
+	int isOperator(char op)
+	{
+		switch (op)
+		{
+			case '+':
+			case '-':
+			case '*':
+			case '/':
+				return 1;
+			default:
+				return 0;
+		}
+	}
+	int calculate(int op1, int op2, char opr)
+	{
+		int result;
+		switch (opr)
+		{
+			case '*':
+				result = op1 * op2;
+				break;
+			case '/':
+				result = op1 / op2;
+				break;
+			case '+':
+				result = op1 + op2;
+				break;
+			case '-':
+				result = op1 - op2;
+				break;
+			default:
+				cout << "Undefined operator error\n";
+				exit(0);
+		}
+		return result;
+	}
 	int isdigit(int);
 
 public:
@@ -20,7 +54,12 @@ public:
 	{
 		expression = s;
 	}
-	void printExpression() const;
+	void printExpression() const
+	{
+		for (int i = 0; i < expression.size(); i++)
+		cout << expression[i] << "\t";
+		cout << endl;
+	}
 	int Evaluation()
 	{
 		const int N = 20;
