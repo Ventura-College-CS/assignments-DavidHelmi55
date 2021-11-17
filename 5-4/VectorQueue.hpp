@@ -1,56 +1,46 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 template<class T, int size = 100>
 class VectorQueue
 {
     private:
-        T queue<size>;
-        int front;
-        int rear;
+        vector<T> q;
     
     public:
-        VectorQueue() : front(-1), rear(-1) {}
+        VectorQueue() {q.reserve(size);}
         void enqueue(T el)
         {
+
             if(!isFull())
-            {
-                if(isEmpty())
-                {
-                    front = rear = 0;
-                    queue<0> = el;
-                }
-                else
-                {
-                    rear = rear + 1;
-                    queue<rear> = el;
-                }
-            }
-            else
-                cout << "Queue is full \n";
+                q.push_back(el);
+
         }
         T dequeue()
         {
+            
             T el;
-            if (!isEmpty())
+            if(!isEmpty())
             {
-                el = queue<front>;
-                front += 1;
-                if(front == rear + 1)
-                    front = rear = -1;
+                el = q.front();
+                q.erase(q.begin());
             }
             else
                 cout << "Queue is Empty \n";
-        
             return el;
+
+
         }
         int isFull()
         {
-            return rear == size - 1;
+            if(q.size() == size)
+                return 1;
+            else
+                return 0;
         }
         int isEmpty()
         {
-            return(front == -1 && rear == -1);
+            return q.empty();
         }
 };
-//

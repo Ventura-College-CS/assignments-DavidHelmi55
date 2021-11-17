@@ -20,6 +20,8 @@ int main()
     cout << q.dequeue() << endl;
     cout << q.dequeue() << endl;
     cout << q.dequeue() << endl;
+    cout << q.dequeue() << endl;
+    cout << q.dequeue() << endl;
 
     if(q.isEmpty())
         cout << "Queue is Empty \n";
