@@ -53,3 +53,4 @@ class VectorQueue
             return(front == -1 && rear == -1);
         }
 };
+//
