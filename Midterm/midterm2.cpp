@@ -50,7 +50,7 @@ class StudentCompare
 {
 
     public:
-		int operator()(const Student &lhs, const Student &rhs)  		// Operator Overloading 
+		int operator()(const Student &lhs, const Student &rhs)
 		{
 			double 	lhssum = 0.0, rhssum = 0.0;
 			vector<double> score;
@@ -67,7 +67,7 @@ class StudentCompare
 
 int main()
 {
-	Student s1, s2, s3;
+	Student s1, s2, s3, s4, s5;
 	Student pop_student;
 
 	s1.setSid(10000001);
@@ -85,11 +85,23 @@ int main()
 	s3.setScore(100, 90, 50);
 	s3.printStudent();
 
+    s4.setSid(10000004);
+	s4.setSname("David");
+	s4.setScore(100, 100, 95);
+	s4.printStudent();
+	
+	s5.setSid(10000005);
+	s5.setSname("Bob");
+	s5.setScore(20, 10, 40);
+	s5.printStudent();
+
 	priority_queue<Student, vector<Student>, StudentCompare> pq;
    
 	pq.push(s1);
 	pq.push(s2);
 	pq.push(s3);
+    pq.push(s4);
+    pq.push(s5);
 
 	while (!pq.empty())
 	{
