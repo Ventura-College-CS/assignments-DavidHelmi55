@@ -4,8 +4,6 @@
 #include <vector>
 using namespace std;
 
-template <class T>
-
 class Student
 {
 
@@ -19,7 +17,7 @@ class Student
         Student(int i, string name, double *sc);
         int getID()
         {
-            
+
         }
         string getName()
         {
@@ -32,6 +30,7 @@ class Student
 
 };
 
+template <class T>
 class Stack
 {
 
