@@ -15,18 +15,9 @@ class Student
     public:
         Student();
         Student(int i, string name, double *sc);
-        int getID()
-        {
-
-        }
-        string getName()
-        {
-
-        }
-        double *getScores()
-        {
-
-        }
+        int getID() const{return SID;}
+        string getName() const { return SName;}
+        double getScores() const{ return scores[3];}
 
 };
 
