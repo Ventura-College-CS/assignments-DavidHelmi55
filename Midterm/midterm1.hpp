@@ -21,7 +21,7 @@ class Student
 
 };
 
-template <class T>
+template <class T, int capacity=3>
 class Stack
 {
 
