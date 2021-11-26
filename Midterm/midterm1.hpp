@@ -14,7 +14,36 @@ class Stack
 
         void push(T el)
         {
+
+
+        }
+
+        T pop()
+        {
+
             
+
+        }
+
+        T &topEl()
+        {
+
+            return p.back();
+
+        }
+
+        int isEmpty()
+        {
+
+            return p.empty();
+
+        }
+
+        int size()
+        {
+
+            return p.size();
+
         }
 
 };
