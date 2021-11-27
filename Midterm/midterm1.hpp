@@ -29,7 +29,7 @@ class Stack
         vector<T> p;
     
     public:
-        stack(int size)
+        void stack(int size)
         {
             p.reserve(size);
         }
