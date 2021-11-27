@@ -13,7 +13,7 @@ class Student
         double scores [3];
 
     public:
-        Student();
+        Student() : SID(0), SName() {}
         Student(int i, string name, double *sc);
         int getID() const{return SID;}
         string getName() const { return SName;}

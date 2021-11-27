@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
 
+    Student s1, s2, s3, s4, s5;
     Stack<int, 5>p;
 
     p.push(1001, "John", 100, 20, 100);
