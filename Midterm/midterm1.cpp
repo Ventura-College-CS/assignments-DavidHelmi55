@@ -9,7 +9,7 @@ int main()
 
     
 
-    Stack<int, 5>p;
+    Stack<Student, 5>p;
 
     p.push(1001, "John", 100, 20, 100);
     p.push(1002, "Bill", 5, 30, 40);
