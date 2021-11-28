@@ -4,20 +4,48 @@
 #include <vector>
 using namespace std;
 
+const int NUM_SCORES = 2;
+
 class Student
 {
 
     private:
         int SID;
         string SName;
-        double scores [3];
+        double score [3];
 
     public:
         Student() : SID(0), SName() {}
-        Student(int i, string name, double *sc);
+        Student(int i, string name, double s0, double s1, double s2, double s3, double s4)
+        {
+            SID = i;
+            SName = name;
+            score.push_back(s0);
+            score.push_back(s1);
+            score.push_back(s2);
+            score.push_back(s3);
+            score.push_back(s4);
+        }
         int getID() const{return SID;}
         string getName() const { return SName;}
-        double getScores() const{ return scores[3];}
+        vector<double> const &getScore() const { return score; }
+	    void setSid(int id) { SID = id; }
+	    void setSname(string name) { SName = name; }
+        void setScore(double s0, double s1, double s2)
+	    {
+		    score.clear();
+		    score.push_back(s0);
+		    score.push_back(s1);
+		    score.push_back(s2);
+	    }
+	    void printStudent() const
+	    {
+		    cout << "Student ID: " << SID << "\t";
+		    cout << "Name: " << SName << "\t";
+		    for (int i = 0; i < NUM_SCORES; i++)
+			    cout << score[i] << "\t";
+		    cout << endl;
+	    }
 
 };
 
