@@ -3,7 +3,7 @@
 using namespace std;
 
 
-template <class T, int capacity=3>
+
 int main()
 {
 
@@ -44,7 +44,11 @@ int main()
     p.push(s4);
     p.push(s5);
 
+	Student ret;
     while(p.isEmpty())
-        cout << val.getSid() << endl;
+	{
+		ret = p.pop();
+        cout << ret.getID() << endl;
+	}
 
 }

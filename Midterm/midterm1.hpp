@@ -12,7 +12,7 @@ class Student
     private:
         int SID;
         string SName;
-        double score [3];
+        vector<double> score;
 
     public:
         Student() : SID(0), SName() {}
