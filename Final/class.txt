@@ -1,0 +1,10 @@
+10001   Calculus            5
+10002   History             4
+10003   CS                  3
+10004 	English             4
+10005 	Econ                3
+10006 	Chemistry           5
+10007 	Psychology          3
+10008 	PE                  2
+10009 	Engineering         5
+10010 	Anthropology        4
