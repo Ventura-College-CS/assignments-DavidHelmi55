@@ -10,7 +10,7 @@ struct Class{
 
 int binarySearch(int array[], int first, int last, int target)
 {
-
+        
     if (first > last)
                return -1;
        int mid = (first + last) / 2;

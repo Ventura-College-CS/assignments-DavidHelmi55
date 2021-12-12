@@ -31,13 +31,13 @@ private:
 				result = op1 * op2;
 				break;
 			case '/':
-				result = op1 / op2;
+				result = op2 / op1;
 				break;
 			case '+':
 				result = op1 + op2;
 				break;
 			case '-':
-				result = op1 - op2;
+				result = op2 - op1;
 				break;
 			default:
 				cout << "Undefined operator error\n";
