@@ -17,10 +17,7 @@ int main()
 		cerr << "File Open Error\n";
 		exit(0);
 	}
-
-    cout << "Which CourseID would you like information for? " << endl;
-    cin >> target;
-    
+   
     Course coursearray[10];
     int cid;
     string cname;
