@@ -3,12 +3,6 @@
 #include <fstream>
 using namespace std;
 
-struct Class{
-    int CourseID;
-    string CourseName;
-    int CourseCredit;
-};
-
 int binarySearch(int array[], int first, int last, int target)
 {
         
