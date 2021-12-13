@@ -9,8 +9,28 @@ void printArray(int[], int);
 
 int main()
 {
-	const int N = 7;
-	int num[] = {1, 8, 5, 9, 4, 3, 7};
+	int target;
+    ifstream ifs;
+    ifs.open("class.txt");
+	if ( ifs.fail())
+	{
+		cerr << "File Open Error\n";
+		exit(0);
+	}
+
+    cout << "Which CourseID would you like information for? " << endl;
+    cin >> target;
+    
+    Course coursearray[10];
+    int cid;
+    string cname;
+    int ccredit;
+    int i;
+    for(i=0; i<10; i++)
+    {
+        ifs >> cid >> cname >> ccredit;
+        coursearray[i].setCourse(cid, cname, ccredit);
+    }
 
 	printArray(num, N);
 	qsort(num, 0, N-1); 
