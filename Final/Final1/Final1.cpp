@@ -3,17 +3,17 @@
 #include <fstream>
 using namespace std;
 
-int binarySearch(int array[], int first, int last, int target)
+int binarySearch(Course array[], int first, int last, int target)
 {
         
     if (first > last)
                return -1;
        int mid = (first + last) / 2;
-       if (array[mid] == target)
+        if (array[mid].getID() == target)
                return mid;
-       if (array[mid] > target)
+        if (array[mid].getID() > target)
                return binarySearch(array, first, mid - 1, target);
-       else
+        else
                return binarySearch(array, mid + 1, last, target);
        return -1;
     
@@ -33,9 +33,18 @@ int main()
         cout << "Which CourseID would you like information for? " << endl;
         cin >> target;
     
-        int array[] = {10 , 15, 20, 25, 30, 35, 40, 45, 50, 55};
-        int x = sizeof(array) / sizeof(array[0]);
-        int result = binarySearch(array, 0, x-1, target);
+        Course coursearray[10];
+        int cid;
+        string cname;
+        int ccredit;
+        int i;
+        for(i=0; i<10; i++)
+        {
+                ifs >> cid >> cname >> ccredit;
+                coursearray[i].setCourse(cid, cname, ccredit);
+        }
+        int x = 10;
+        int result = binarySearch(coursearray, 0, x-1, target);
         (result == -1)
                 ? cout << "Element is not present in array"
                 : cout << "Element is present at index " << result;

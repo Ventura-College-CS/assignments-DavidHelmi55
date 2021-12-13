@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-class Class
+class Course
 {
     private:
         int CourseID;
@@ -10,8 +10,8 @@ class Class
         int CourseCredit;
 
     public:
-        Class() : CourseID(0), CourseName() {}
-        Class(int i, string name, int x)
+        Course() : CourseID(0), CourseName() {}
+        Course(int i, string name, int x)
         {
             CourseID = i;
             CourseName = name;
@@ -23,6 +23,12 @@ class Class
 	    void setSid(int id) { CourseID = id; }
 	    void setSname(string name) { CourseName = name; }
         void setCredit(int s) {CourseCredit = s; }
+        void setCourse(int id, string name, int s)
+        {
+            CourseID = id;
+            CourseName = name;
+            CourseCredit = s;
+        }
 	    void printClass() const
 	    {
 		    cout << "Class ID: " << CourseID << "\t";
