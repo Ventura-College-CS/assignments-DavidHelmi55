@@ -9,7 +9,6 @@ void printArray(int[], int);
 
 int main()
 {
-	int target;
     ifstream ifs;
     ifs.open("class.txt");
 	if ( ifs.fail())
@@ -29,9 +28,9 @@ int main()
         coursearray[i].setCourse(cid, cname, ccredit);
     }
 
-	printArray(num, N);
-	qsort(num, 0, N-1); 
-	printArray(num, N);
+	printArray(coursearray, N);
+	qsort(coursearray, 0, N-1); 
+	printArray(coursearray, N);
 
 }
 
@@ -54,8 +53,8 @@ int partition(int num[], int first, int last)
 	int i = -1;
 	for (int j = 0; j < last; j++)
 	{
-		if (num[j] < pivot)
-			swap(num[++i], num[j]);
+		if (coursearray[i].getID() < pivot)
+			swap(num[++i], coursearray[i].getID());
 	}
 	swap(num[i + 1], num[last]);
 	return i + 1;
