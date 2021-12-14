@@ -28,9 +28,9 @@ int main()
         coursearray[i].setCourse(cid, cname, ccredit);
     }
 
-	printArray(coursearray, N);
-	qsort(coursearray, 0, N-1); 
-	printArray(coursearray, N);
+	printArray(coursearray[i], N);
+	qsort(coursearray[i], 0, N-1); 
+	printArray(coursearray[i], N);
 
 }
 
